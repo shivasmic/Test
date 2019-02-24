@@ -1,6 +1,6 @@
 #include<iostream>
 #define MAXSIZE 12
-#define MEX 1000
+#define MEX 10000
 using namespace std;
 int lencheck(int i);
 int charcheck(char str[],int ind);
@@ -37,7 +37,7 @@ int main()
         if(e==1)
            f=excheck(b[i].str,b[i].ind);
         if(f==1)
-           cout<<"\t Success \n";
+           cout<<"\t Success. \n";
     }
     return 0;
 }
@@ -45,12 +45,12 @@ int lencheck(int i)
 {
     if(i<6)
     {
-        cout<<"\t Failure: Password must be at least 6 characters long \n";
+        cout<<"\t Failure: Password must be at least 6 characters long. \n";
         return 0;
     }
     else if(i>12)
     {
-        cout<<"\t Failure: Password must be at max 12 characters long \n";
+        cout<<"\t Failure: Password must be at max 12 characters long. \n";
         return 0;
     }
     else
@@ -68,7 +68,7 @@ int charcheck(char str[],int ind)
         return 1;
     else
     {
-        cout<<"\t Failure: Password cannot contain %, !, (, ) \n";
+        cout<<"\t Failure: Password cannot contain %, !, (, ). \n";
         return 0;
     }
 }
@@ -84,7 +84,7 @@ int setcheck(char str[],int ind)
         return 1;
     else
     {
-        cout<<"\t Failure: Password must contain atleast one letter from A-Z \n";
+        cout<<"\t Failure: Password must contain atleast one letter from A-Z. \n";
         return 0;
     }
 }
@@ -100,7 +100,7 @@ int numcheck(char str[],int ind)
         return 1;
     else
     {
-        cout<<"\t Failure: Password must contain atleast one letter from 0-9 \n";
+        cout<<"\t Failure: Password must contain atleast one letter from 0-9. \n";
         return 0;
     }
 }
@@ -116,7 +116,7 @@ int capcheck(char str[],int ind)
         return 1;
     else
     {
-        cout<<"\t Failure: Password must contain atleast one letter from a-z \n";
+        cout<<"\t Failure: Password must contain atleast one letter from a-z. \n";
         return 0;
     }
 }
@@ -132,7 +132,7 @@ int excheck(char str[],int ind)
         return 1;
     else
     {
-        cout<<"\t Failure: Password must contain atleast one letter from *, @, $, #, _ or = \n";
+        cout<<"\t Failure: Password must contain atleast one letter from *, @, $, #, _ or =. \n";
         return 0;
     }
 }
